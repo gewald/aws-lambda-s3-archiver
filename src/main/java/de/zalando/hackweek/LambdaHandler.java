@@ -6,7 +6,7 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static de.zalando.hackweek.ModelConfigSimpleConverter.toArticleModel;
+import static de.zalando.hackweek.EventSourceToDestinationConverter.toArticleModel;
 
 public class LambdaHandler implements RequestHandler<LogEntry, Void> {
 

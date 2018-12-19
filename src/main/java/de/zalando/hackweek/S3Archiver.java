@@ -22,16 +22,7 @@ public class S3Archiver {
     private AmazonS3 amazonS3Client;
 
     public void archiveEvent(LambdaHandler.ArticleModel articleModel) {
-
-
-
         amazonS3Client.copyObject(bucketNameSource, sourceKey, bucketNameArchive, articleModel.getModelSku());
     }
-
-    private String constructArchivePath(final String modelSku, final String supplierArticleNumber,
-                                      final String supplierColorCode, final String imageFilename) {
-        return on('/').skipNulls().join(supplierCode, supplierArticleNumber, supplierColorCode, imageFilename);
-    }
-
 
 }
