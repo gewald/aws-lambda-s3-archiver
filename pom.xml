@@ -21,33 +21,30 @@
     </parent>
 
     <dependencies>
-        <!-- spring -->
+
+        <!-- Spring -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-function-adapter-aws</artifactId>
+            <version>1.0.1.RELEASE</version>
+        </dependency>
+
+        <!-- AWS -->
 
         <dependency>
             <groupId>com.amazonaws.serverless</groupId>
             <artifactId>aws-serverless-java-container-spring</artifactId>
             <version>1.2</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.symphonia/lambda-logging -->
-        <dependency>
-            <groupId>io.symphonia</groupId>
-            <artifactId>lambda-logging</artifactId>
-            <version>1.0.1</version>
-        </dependency>
-
-
         <dependency>
             <groupId>com.amazonaws.serverless</groupId>
             <artifactId>aws-serverless-java-container-spring</artifactId>
             <version>1.2</version>
         </dependency>
-
-        <!-- aws -->
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
@@ -63,6 +60,11 @@
             <artifactId>aws-java-sdk-lambda</artifactId>
             <version>1.11.472</version>
         </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-lambda-java-events</artifactId>
+            <version>2.2.4</version>
+        </dependency>
 
         <!-- additional libraries -->
         <dependency>
@@ -70,6 +72,16 @@
             <artifactId>lombok</artifactId>
             <version>1.18.4</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>au.com.bytecode</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
         </dependency>
 
     </dependencies>

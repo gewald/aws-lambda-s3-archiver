@@ -1,0 +1,22 @@
+*.com
+*.class
+*.exe
+*.lst
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.log
+._*
+*.iml
+
+# used in every project
+target/
+dist/
+static/dist
+build/
+.idea
