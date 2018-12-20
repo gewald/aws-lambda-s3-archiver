@@ -1,4 +1,4 @@
-package de.zalando.hackweek;
+package de.aws.lambda;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,7 +33,7 @@ public class S3EventHandler extends SpringBootRequestHandler<S3Event, Context> {
     }
 
     @Override
-    public Object handleRequest(S3Event event, Context context) {
+    public Void handleRequest(S3Event event, Context context) {
         AmazonS3 s3Client = AmazonS3ClientBuilder.defaultClient();
         LambdaLogger logger = context.getLogger();
         Map<String, List<S3Object>> repartitionedEventFiles = new HashMap<>();
@@ -54,7 +54,7 @@ public class S3EventHandler extends SpringBootRequestHandler<S3Event, Context> {
             }
         }
 
-        return super.handleRequest(event, context);
+        return null;
     }
 
     private void uploadToS3(AmazonS3 s3Client,

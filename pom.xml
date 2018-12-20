@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.zalando.hackweek</groupId>
-    <artifactId>AwsLambdaS3FileSorter</artifactId>
+    <artifactId>RepartitioningS3FilesApplication</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -24,22 +24,12 @@
 
         <!-- Spring -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-function-adapter-aws</artifactId>
             <version>1.0.1.RELEASE</version>
         </dependency>
 
         <!-- AWS -->
-
-        <dependency>
-            <groupId>com.amazonaws.serverless</groupId>
-            <artifactId>aws-serverless-java-container-spring</artifactId>
-            <version>1.2</version>
-        </dependency>
         <dependency>
             <groupId>com.amazonaws.serverless</groupId>
             <artifactId>aws-serverless-java-container-spring</artifactId>
