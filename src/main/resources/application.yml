@@ -1,4 +1,0 @@
-cloud:
-  aws:
-      s3_bucket_archive: event-archive
-      s3_bucket_source: event-entry
